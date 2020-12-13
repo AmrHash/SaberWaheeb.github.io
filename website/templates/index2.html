@@ -1,0 +1,183 @@
+
+{% load static %}
+{% block content %}
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Prof Waheeb</title>
+		<meta charset="utf-8" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}"
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong></strong>Prof Waheeb</a>
+									<ul class="icons">
+										
+										<li><a href="https://www.facebook.com/saber.waheeb.7?fref=ts" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Prof Waheeb<br />
+											</h1>
+											<p>MB BCH, MSc, MD
+												Prof.& Head of pediatric surgery unit. Alex.Uni.</p>
+										</header>
+										<p></p>
+										
+									</div>
+									<span class="image object"> 
+										<img src="{% static 'images/profile.jpg'%}" alt="" />
+									</span>
+								</section>
+
+
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Blog Posts</h2>
+									</header>
+									<div class="posts">
+										<article>
+										{% for post in object_list %}
+ 									<li> <a href="{% url 'article-detail' post.pk %}" >  {{post.title}} </a> - 
+  									  {{post.author}}  <br/>
+										{{post.body | slice:":200"}} </li>
+										{% endfor %}
+
+										{% endblock %}
+										</article>
+<hr>
+
+   
+
+
+										</article>
+										<article>
+											<a href="#" class="image"><img src="{% static 'images/pic02.jpg'%}" alt="" /></a>
+											<h3>Nulla amet dolore</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="{% static 'images/pic03.jpg'%}" alt="" /></a>
+											<h3>Tempus ullamcorper</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="{% static 'images/pic04.jpg'%}" alt="" /></a>
+											<h3>Sed etiam facilis</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="{% static 'images/pic05.jpg'%}" alt="" /></a>
+											<h3>Feugiat lorem aenean</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="{% static 'images/pic06.jpg'%}" alt="" /></a>
+											<h3>Amet varius aliquam</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+									</div>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+					
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{% url 'home'%}">Homepage</a></li>
+										<li><a href="{% url 'contact'%}">Get an Appointment</a></li>
+										<li><a href="{% url 'bio'%}">Bio</a></li>
+										<span class="opener">For Doctors</span>
+										<ul>
+										<li><a href="#">Scientific Publication
+										</a></li>
+										<li><a href="#">operations</a></li>
+												
+										</ul>
+										</li>
+										<li><a href="#">العربية</a></li>
+								
+										<li>
+											
+											</ul>
+										</li>
+								
+									</ul>
+								</nav>
+
+							
+							<!-- Section -->
+								<section>
+									
+										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+										<li class="icon solid fa-phone">+2 01223312938</li>
+										<li class="icon solid fa-home">7 st Ali Alkhshkhany - Al Azaritah
+											Shatebi, Qesm Bab Sharqi,
+											<br />
+											Alexandria Governorate</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; All rights reserverd. 
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js'%}"></script>
+			<script src="{% static 'assets/js/browser.min.js'%}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js'%}"></script>
+			<script src="{% static 'assets/js/util.js'%}"></script>
+			<script src="{% static 'assets/js/main.js'%}"></script>
+
+		
+	</body>
+</html>
