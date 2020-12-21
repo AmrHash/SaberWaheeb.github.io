@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0','localhost', 'saberwaheeb.herokuapp.com']
 
-heroku config:set DISABLE_COLLECTSTATIC=1
 
 
 # Application definition
