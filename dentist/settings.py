@@ -26,9 +26,8 @@ SECRET_KEY = 'hy-^j+57s001+ov(=2f_p_own1l^hokk)$%isv@fbm(xb^*60c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0','localhost', 'saberwaheeb.herokuapp.com']
 
-heroku config:set DISABLE_COLLECTSTATIC=1
+ALLOWED_HOSTS = ['0.0.0.0','localhost', 'drwaheeb.herokuapp.com']
 
 
 # Application definition
@@ -82,13 +81,10 @@ WSGI_APPLICATION = 'dentist.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'posstgres',
-        'USER': 'postgres',
-        'PASSWORD': 'Shithappens4',
-        'HOST': 'localhost',
-        'PORT': '5432',
-        
+
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'sqlite3.db',                      # Or path to database file if using sqlite3.
+
     }
 }
 
@@ -129,6 +125,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATIC_ROOT = MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
