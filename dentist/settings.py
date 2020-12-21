@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'dentist.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'personal_db',
+        'NAME': 'posstgres',
         'USER': 'postgres',
         'PASSWORD': 'Shithappens4',
         'HOST': 'localhost',
