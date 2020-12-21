@@ -26,7 +26,9 @@ SECRET_KEY = 'hy-^j+57s001+ov(=2f_p_own1l^hokk)$%isv@fbm(xb^*60c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0','localhost']
+ALLOWED_HOSTS = ['0.0.0.0','localhost', 'saberwaheeb.herokuapp.com']
+
+heroku config:set DISABLE_COLLECTSTATIC=1
 
 
 # Application definition
