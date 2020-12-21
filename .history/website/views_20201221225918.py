@@ -55,5 +55,5 @@ def Operation(request):
 
 class ArticleDetailView(DetailView):
     model = Post
-    template_name = 'article_details.html'
+    template_name = 'article_detail.html'
 

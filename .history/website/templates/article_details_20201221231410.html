@@ -6,6 +6,35 @@
 <!DOCTYPE HTML>
 
 <html>
+
+<!-- Sidebar -->
+<div id="sidebar">
+	<div class="inner">
+
+		
+		<!-- Menu -->
+		<nav id="menu">
+			<header class="major">
+				<h2>Menu</h2>
+			</header>
+			<ul>
+				<li><a href="{% url 'home'%}">Homepage</a></li>
+				<li><a href="{% url 'contact'%}">Get an Appointment</a></li>
+				<li><a href="{% url 'bio'%}">Bio</a></li>
+				
+					<span class="opener">For Doctors</span>
+					<ul>
+						<li><a href="#">Scientific Publication
+						</a></li>
+						<li><a href="#">operations</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="#">العربية</a></li>
+		
+		
+			</ul>
+		</nav>
 	<head>
 		<title>Prof Waheeb</title>
 		<meta charset="utf-8" />
@@ -45,7 +74,11 @@
 						
 						<br>
 						{{post.body}}
+						<hr>
+
 						<img class='img'src="{{post.img.url}} "> </img>
+						<hr>
+						<br>
 
 						
 						<br>
@@ -55,34 +88,7 @@
 					</div>
 
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							
-							<!-- Menu -->
-							<nav id="menu">
-								<header class="major">
-									<h2>Menu</h2>
-								</header>
-								<ul>
-									<li><a href="{% url 'home'%}">Homepage</a></li>
-									<li><a href="{% url 'contact'%}">Get an Appointment</a></li>
-									<li><a href="{% url 'bio'%}">Bio</a></li>
-									
-										<span class="opener">For Doctors</span>
-										<ul>
-											<li><a href="#">Scientific Publication
-											</a></li>
-											<li><a href="#">operations</a></li>
-											
-										</ul>
-									</li>
-									<li><a href="#">العربية</a></li>
-							
-							
-								</ul>
-							</nav>
+				
 							
 							
 							

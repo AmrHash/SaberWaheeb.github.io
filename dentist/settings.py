@@ -27,7 +27,7 @@ SECRET_KEY = 'hy-^j+57s001+ov(=2f_p_own1l^hokk)$%isv@fbm(xb^*60c'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['0.0.0.0','localhost', 'drwaheeb.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1', 'drwaheeb.herokuapp.com']
 
 
 # Application definition
