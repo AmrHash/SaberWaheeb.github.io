@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Prof Waheeb</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}" /> 
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="#" class="logo"><strong>Prof Waheeb</strong></a>
+									<ul class="icons">
+										
+										<li><a href="https://www.facebook.com/saber.waheeb.7" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										
+									</ul>
+								</header>
+								<div class="container">  
+									<form id="contact" action="{% url 'contact' %}" method="post">
+											{% csrf_token %}
+									  <h4>Contact us</h4>
+									  <fieldset>
+										<input name= "name" placeholder="Your name" type="text" tabindex="1" required autofocus>
+									  </fieldset>
+									 
+									  <fieldset>
+										<input name ="phone" placeholder="Your Phone Number" type="tel" tabindex="3" required>
+									  </fieldset>
+									  
+									  <fieldset>
+										<textarea name = "message" placeholder="Type your message here...." tabindex="5" required></textarea>
+									  </fieldset>
+									  <hr>
+									  <fieldset>
+										<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+									  </fieldset>
+									  
+									</form>
+								  </div>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Address </h1>
+										<h2> 7 Ali Alkhshkhany - Al Azaritah Shatebi, Qesm Bab Sharqi,
+											Alexandria Governorate</h2>
+									</header>   
+
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3412.5843660004643!2d29.906828314341038!3d31.204535769793146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c38b8c1c8c81%3A0x69f897670e288ac!2sAli%20E%20L%20Kahshkhani%20St%2C%20Al%20Azaritah%20WA%20Ash%20Shatebi%2C%20Qism%20Bab%20Sharqi%2C%20Alexandria%20Governorate!5e0!3m2!1sen!2seg!4v1607079074362!5m2!1sen!2seg" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							
+
+							<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+									<li><a href="{% url 'home'%}">Homepage</a></li>
+									<li><a href="contact.html">Get an Appointment</a></li>
+									<li><a href="bio.html">Bio</a></li>
+									<li>
+										<span class="opener">For Doctors</span>
+										<ul>
+											<li><a href="#">Scientific Publication
+											</a></li>
+											<li><a href="#">operations</a></li>
+											
+										</ul>
+									</li>
+									<li><a href="#">العربية</a></li>
+							
+							
+								</ul>
+							</nav>
+							
+
+
+										
+									
+							</section>
+
+					
+								<!-- Section -->
+								<section>
+								<ul>
+									<li class="icon solid fa-envelope"><a href="#">saberwaheeb@gmail.com</a></li>
+									<br>
+									<li class="icon solid fa-phone">+2 01223312938</li>
+									<br>
+									<li class="icon solid fa-home">7 Ali Alkhshkhany - Al Azaritah
+										Shatebi, Qesm Bab Sharqi,
+										<br>
+										Alexandria Governorate</li>
+								</ul>
+							</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; All rights reserved. 
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts --> 
+			<script src="{% static 'assets/js/jquery.min.js'%}"></script>
+			<script src="{% static 'assets/js/browser.min.js'%}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js}"></script>
+			<script src="{% static 'assets/js/util.js'%}"></script>
+			<script src="{% static 'assets/js/main.js'%}"></script>
+
+	</body>
+</html>

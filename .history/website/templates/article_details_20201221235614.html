@@ -1,0 +1,136 @@
+{% load static %}
+
+
+
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+
+
+		<title>Prof Waheeb</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}" /> 
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Prof Waheeb</strong></a>
+									<ul class="icons">
+										
+										<li><a href="https://www.facebook.com/saber.waheeb.7" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										
+									</ul>
+								</header>
+						</div>
+					</div>
+					<div class = 'textarea'> 
+						{% block content %}
+
+						<h1 class = 'textarea' > {{post.title}} </h1> <hr>
+						
+						<br>
+						<small>By: {{post.author}} on {{post.date}}
+						
+						</small>
+						<hr>
+						
+						<br>
+						{{post.body}}
+						<hr>
+
+						<img class='img'src="{{post.img.url}} "> </img>
+						<hr>
+						<br>
+
+						
+						<br>
+						<H1><a href="{%url 'home' %}" type="button" class="btn btn-secondary">Back</a> </H1>
+						
+						{% endblock %}
+					</div>
+
+
+				
+							
+		<!-- Sidebar -->
+<div id="sidebar">
+	<div class="inner">
+
+		
+		<!-- Menu -->
+		<nav id="menu">
+			<header class="major">
+				<h2>Menu</h2>
+			</header>
+			<ul>
+				<li><a href="{% url 'home'%}">Homepage</a></li>
+				<li><a href="{% url 'contact'%}">Get an Appointment</a></li>
+				<li><a href="{% url 'bio'%}">Bio</a></li>
+				
+					<span class="opener">For Doctors</span>
+					<ul>
+						<li><a href="{% url 'science'%}">Scientific Publication
+						</a></li>
+						<li><a href="{% url 'operation'%}">operations</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="#">العربية</a></li>
+		
+		
+			</ul>
+		</nav>
+							
+
+
+										
+									
+							</section>
+
+					
+								<!-- Section -->
+								<section>
+								<ul>
+									<li class="icon solid fa-envelope"><a href="#">saberwaheeb@gmail.com</a></li>
+									<br>
+									<li class="icon solid fa-phone">+2 01223312938</li>
+									<br>
+									<li class="icon solid fa-home">7 Ali Alkhshkhany - Al Azaritah
+										Shatebi, Qesm Bab Sharqi,
+										<br>
+										Alexandria Governorate</li>
+								</ul>
+							</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; All rights reserved. 
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+			
+
+		<!-- Scripts --> 
+			<script src="{% static 'assets/js/jquery.min.js'%}"></script>
+			<script src="{% static 'assets/js/browser.min.js'%}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js}"></script>
+			<script src="{% static 'assets/js/util.js'%}"></script>
+			<script src="{% static 'assets/js/main.js'%}"></script>
+
+	</body>
+</html>
