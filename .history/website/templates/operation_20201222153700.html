@@ -1,0 +1,99 @@
+
+{% load static %}
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Prof Waheeb</title>
+		<meta charset="utf-8" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}"
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong></strong>Prof Waheeb</a>
+									<ul class="icons">
+										
+										<li><a href="https://www.facebook.com/saber.waheeb.7?fref=ts" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Prof Waheeb<br />
+											</h1>
+											<p>MB BCH, MSc, MD
+												Prof.& Head of pediatric surgery unit. Alex.Uni.</p>
+										</header>
+										<p></p>
+										
+									</div>
+									<span class="image object"> 
+										<img src="{% static 'images/profile.jpg'%}" alt="" />
+									</span>
+								</section>
+
+
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>
+											Articles
+
+										</h2>
+									</header>
+									<div class="posts">
+                                        
+                                        {% for operation in key  %}
+                                        
+										<article>
+											<a href="{% url 'operation-detail' operation.pk %}" class="image"><img src="{{post.image}}" alt="" /></a>
+											<h3>{{operation.title}}</h3> <br>
+											<h6> {{operation.author}}</h6> <br>
+
+											<p>{{operation.body | slice:":200"}}</p>
+											<ul class="actions">
+												<li><a href="{% url 'operation-detail' operation.pk %}" class="button">More</a></li>
+											</ul>
+										</article>
+                                        {% endfor %}
+                                        
+									</div>
+								</section>
+
+						</div>
+					</div>
+
+
+				
+
+
+				</div>
+			</div>
+
+	</div>
+
+<!-- Scripts -->
+	<script src="{% static 'assets/js/jquery.min.js'%}"></script>
+	<script src="{% static 'assets/js/browser.min.js'%}"></script>
+	<script src="{% static 'assets/js/breakpoints.min.js'%}"></script>
+	<script src="{% static 'assets/js/util.js'%}"></script>
+	<script src="{% static 'assets/js/main.js'%}"></script>
+
+
+</body>
+</html>
+</html>
